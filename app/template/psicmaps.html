@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Mão Amiga</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=SUA_API_KEY&libraries=places"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        header {
+            background-color: #2679bd;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 24px;
+        }
+        .container {
+            display: flex;
+            flex: 1;
+            flex-direction: row;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            width: 200px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+        nav button {
+            background-color: #2679bd;
+            border: none;
+            color: white;
+            padding: 10px;
+            margin: 5px 0;
+            cursor: pointer;
+            text-align: left;
+        }
+        nav button:hover {
+            background-color: #2679bd;
+        }
+        main {
+            flex: 1;
+            padding: 20px;
+            background-color: #f4f4f4;
+            overflow-y: auto;
+        }
+        #map-container {
+            height: 500px;
+            margin-top: 20px;
+        }
+        #map {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Mão Amiga
+    </header>
+    <div class="container">
+        <nav>
+          <button onclick="window.location.href='home.html'">Home</button>
+          <button onclick="window.location.href='sobre.html'">Sobre</button>
+          <button onclick="window.location.href='contato.html'">Contato</button>
+        </nav>
+        <main>
+            <h1>&#128204;Profissionais Próximo de Você&#128204;</h1>
+            <p>Aqui você pode buscar psicólogos próximos à sua localização. Utilize o mapa abaixo para encontrar profissionais na sua área.</p>
+
+            <div id="map-container">
+                <div id="map"></div>
+            </div>
+        </main>
+    </div>
+    <script src="/app/js/map.js"></script>
+    <script src="/app/js/loadmap.js"></script>
+
+</body>
+</html>
